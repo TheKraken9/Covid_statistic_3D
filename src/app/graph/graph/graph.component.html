@@ -1,0 +1,7 @@
+<div *ngIf="patient" class="mt-4 container">
+  <li *ngFor="let etat of patient.etats">Temperature: {{ etat.temperature }}<br> Saturation: {{ etat.saturation }}<br> Jour: {{ etat.day+1 }}</li>
+  <div class="alert">
+    <h3>{{ patient.name }} : {{ patient.getEtatSante(conditions) }}</h3>
+  </div>
+</div>
+<div #container class=""></div>

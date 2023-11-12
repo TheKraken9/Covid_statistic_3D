@@ -1,0 +1,14 @@
+<div class="graph container d-flex mt-5" style="justify-content: space-between;">
+  <div class="list">
+    <h4 class="mb-3">Choose your patient : </h4>
+    <select name="patient" [(ngModel)]="selectedPatient" class="form-select w-50 form-control">
+      <option *ngFor="let patient of patients" [ngValue]="patient">{{ patient.name }}</option>
+    </select>
+    <div class="mt-5">
+
+    </div>
+  </div>
+  <app-graph
+    [patient]="selectedPatient"
+  ></app-graph>
+</div>
